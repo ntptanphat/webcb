@@ -2,16 +2,42 @@
   --jumbotron-padding-y: 3rem;
 }
 
-.jumbotron {
+/* .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
   background-color: #fff;
+} */
+
+.main-nav {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .main-nav .nav-item {
   display: flex;
   align-items: center;
+}
+
+.main-nav .nav-item .nav-link {
+  color: #ffffff;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .main-nav .nav-item .nav-link {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.navbar.main-navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #000000 !important;
 }
 
 main {
@@ -57,13 +83,21 @@ main {
 
 .we-are-using .content {
   border: 1px solid #ffffff;
+  margin: 30px;
 }
 
-.we-are-using .item {
+.we-are-using .content .item {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 32px;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .we-are-using .content .item {
+    padding: 32px;
+  }
 }
 
 .branding-bottom {
@@ -77,8 +111,22 @@ main {
   height: 64px;
   display: inline-block;
   background: url("../images/back-to-top.png") no-repeat center center;
+  background-size: contain;
   z-index: 999;
   cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .scrollup {
+    width: 45px;
+    height: 32px;
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 footer {
