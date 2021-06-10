@@ -1,0 +1,103 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.main-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  min-height: 150vh;
+  padding-top: 200px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu .menu-item {
+  /* color: #ff5800; */
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.we-are-using .title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.we-are-using .content {
+  border: 1px solid #ffffff;
+}
+
+.we-are-using .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.branding-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 250px 0 100px;
+}
+
+.scrollup {
+  width: 90px;
+  height: 64px;
+  display: inline-block;
+  background: url("../images/back-to-top.png") no-repeat center center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #000000;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+  color: #f2f2f2;
+}
+
+footer .contact .title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
