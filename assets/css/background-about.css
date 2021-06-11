@@ -1,0 +1,5 @@
+body {
+  /* Location of the image */
+  background-image: url(../images/background-2.png);
+  background-color: rgba(0, 0, 0, 0.75);
+}
