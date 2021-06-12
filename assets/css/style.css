@@ -9,34 +9,58 @@
   background-color: #fff;
 } */
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/AvenirNext-Regular.ttf") format("truetype");
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/AvenirNext-Italic.ttf") format("truetype");
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/AvenirNext-Bold.ttf") format("truetype");
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/AvenirNext-Medium.ttf") format("truetype");
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("fonts/AvenirNext-DemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 body {
   color: #f2f2f2;
+  font-family: "AvenirNext";
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    color: #f2f2f2;
+    font-family: "AvenirNext";
+    font-size: 14px;
+  }
 }
 
 .main-nav {
@@ -96,7 +120,6 @@ main {
 
 .main-menu .menu-item {
   /* color: #ff5800; */
-  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 30px;
   text-align: center;
@@ -104,6 +127,7 @@ main {
 
 .main-menu .menu-item a {
   color: #ff5800;
+  font-weight: 600;
 }
 
 .main-menu .menu-item a:hover {
@@ -114,13 +138,15 @@ main {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.222rem;
   margin-bottom: 20px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .we-are-using .content {
   border: 1px solid #ffffff;
-  margin: 30px;
+  margin: 20px;
 }
 
 .we-are-using .content .item {
@@ -144,7 +170,7 @@ main {
 }
 
 .scrollup {
-  width: 90px;
+  width: 86px;
   height: 64px;
   display: inline-block;
   background: url("../images/back-to-top.png") no-repeat center center;
@@ -159,28 +185,55 @@ main {
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
   .scrollup {
-    width: 45px;
+    width: 43px;
     height: 32px;
     bottom: 20px;
     right: 20px;
   }
 }
 
+/* Footer */
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #000000;
 }
 
-footer p {
-  margin-bottom: 0.25rem;
+footer .left > div {
+  margin-bottom: 0.667rem;
+}
+
+footer .right {
+  margin-top: auto;
+}
+
+footer .left p {
   font-weight: 400;
+  font-style: italic;
   color: #f2f2f2;
+  margin-bottom: 0.333rem;
+}
+
+footer .contact {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer .contact .title {
-  font-size: 18px;
+  font-size: 1.111rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer .right .footer-branding {
+  margin-bottom: 0.889rem;
+}
+footer .right .social {
+  display: flex;
+}
+
+footer .right .social .item:not(:last-of-type) {
+  margin-right: 0.556rem;
 }
 
 .box-shadow {
@@ -189,6 +242,21 @@ footer .contact .title {
 
 .section-about p {
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 1rem;
   font-style: italic;
+}
+
+@media only screen and (max-width: 767px) {
+  footer .contact {
+    flex-direction: column;
+  }
+  footer .contact .left {
+    margin-bottom: 24px;
+  }
+  footer .contact .right {
+    text-align: center;
+  }
+  footer .right .social {
+    justify-content: center;
+  }
 }
