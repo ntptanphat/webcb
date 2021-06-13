@@ -119,10 +119,69 @@ main {
 }
 
 .main-menu .menu-item {
-  /* color: #ff5800; */
   text-transform: uppercase;
   margin-bottom: 30px;
   text-align: center;
+  position: relative;
+}
+
+.main-menu .menu-item > * {
+  display: inline-block;
+}
+
+.main-menu .menu-item .navigate {
+  width: 64px;
+  height: 2px;
+  position: relative;
+}
+
+.main-menu .menu-item .navigate.left {
+  background-image: linear-gradient(to right, #ffffff, #ff5800);
+}
+
+.main-menu .menu-item .navigate.right {
+  background-image: linear-gradient(to right, #ff5800, #ffffff);
+}
+
+.main-menu .menu-item .navigate::after {
+  content: "";
+  background: #ffffff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin-top: 50%;
+  transform: rotate(90deg);
+}
+
+.main-menu .menu-item .navigate.left::after {
+  content: "";
+  background: #ffffff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  margin-top: 50%;
+  transform: rotate(90deg);
+}
+
+.main-menu .menu-item .navigate.right::after {
+  content: "";
+  background: #ffffff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  right: -50%;
+  top: -50%;
+  margin-top: 50%;
+  transform: rotate(90deg);
+}
+
+.main-menu .menu-item .navigate.transparent {
+  background-image: none;
+}
+.main-menu .menu-item .navigate.transparent::after {
+  background-color: transparent;
 }
 
 .main-menu .menu-item a {
@@ -132,6 +191,43 @@ main {
 
 .main-menu .menu-item a:hover {
   text-decoration: none;
+}
+
+.main-menu .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 86px;
+  transform: translateX(50%);
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .main-menu .menu-item .navigate {
+    width: 32px;
+    height: 2px;
+    position: relative;
+  }
+  .main-menu .sub-menu {
+    top: 50px;
+  }
+}
+
+.main-menu .sub-menu.left {
+  left: -50%;
+}
+.main-menu .sub-menu.right {
+  right: 0;
+}
+
+.main-menu .sub-menu .sub-menu-item {
+  text-align: center;
+}
+
+.main-menu .sub-menu .sub-menu-item a {
+  color: #ffffff;
+  font-style: italic;
 }
 
 .we-are-using .title {
